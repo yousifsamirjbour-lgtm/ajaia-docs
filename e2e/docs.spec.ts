@@ -11,12 +11,13 @@ test.describe('Ajaia Docs End-to-End Test Suite', () => {
   test('create, inline rename, format, and verify reload persistence', async ({ page }) => {
     // 1. Create document
     await page.click('#btn-new-document')
-    await expect(page.locator('#doc-title-input')).toBeVisible()
+    await page.waitForFunction(() => document.querySelector('#doc-title-input')?.value === 'Untitled Document')
 
     // 2. Inline rename
     const titleInput = page.locator('#doc-title-input')
     await titleInput.fill('Q4 Strategic Roadmap')
-    await titleInput.press('Enter')
+    await page.keyboard.press('Tab')
+    await page.waitForTimeout(300)
 
     // 3. Format in TipTap Editor
     const editor = page.locator('.ProseMirror')
@@ -52,6 +53,7 @@ test.describe('Ajaia Docs End-to-End Test Suite', () => {
   test('auto-save indicator and Ctrl+S keyboard shortcut', async ({ page }) => {
     // Create new doc
     await page.click('#btn-new-document')
+    await page.waitForFunction(() => document.querySelector('#doc-title-input')?.value === 'Untitled Document')
     const titleInput = page.locator('#doc-title-input')
     await titleInput.fill('AutoSave Verification Document')
 
@@ -111,6 +113,7 @@ test.describe('Ajaia Docs End-to-End Test Suite', () => {
 
     // 1. Alice creates a new document
     await page.click('#btn-new-document')
+    await page.waitForFunction(() => document.querySelector('#doc-title-input')?.value === 'Untitled Document')
     const titleInput = page.locator('#doc-title-input')
     await expect(titleInput).toBeVisible()
     await titleInput.fill(titanTitle)

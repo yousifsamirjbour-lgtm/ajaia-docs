@@ -13,6 +13,7 @@ export const WalkthroughComposition: React.FC = () => {
             durationInFrames={scene.durationInFrames}
           >
             <Scene scene={scene} />
+            <Audio src={staticFile(`audio_${scene.id}.mp3`)} />
           </Series.Sequence>
         ))}
       </Series>

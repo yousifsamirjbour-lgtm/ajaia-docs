@@ -7,15 +7,41 @@ This directory contains the complete Remotion programmatic video project that ge
 - **Frame Rate**: 30 frames per second
 - **Total Duration**: 6,750 frames = 225 seconds = 3 minutes 45 seconds (within the required 3:30–4:30 range)
 - **Format**: H.264 MP4 (`--codec=h264`)
-- **Captions**: Standard synchronized caption overlay for all scenes
+- **Audio Track**: Includes a high-clarity **synthetic voiceover** (generated using `edge-tts` with the `en-US-AndrewNeural` voice) synchronized across all 10 scenes
+- **Captions**: Frame-accurate synchronized subtitle overlay matching the spoken narration word-for-word
 
 ---
 
-## Structure
+## Voiceover Audio
+
+The video is rendered with an integrated **synthetic voiceover** by default:
+- **TTS Engine**: `edge-tts` (open-source, trusted PyPI package, zero account/API keys required)
+- **Voice Selected**: `en-US-AndrewNeural` (clear, articulate, natural presenter voice)
+- **Per-Scene Synchronization**: Each scene sequence in `video/src/Composition.tsx` mounts `<Audio src={staticFile(`audio_${scene.id}.mp3`)} />`, guaranteeing that each scene's spoken audio starts at the exact beginning of that scene and never drifts or bleeds across scene boundaries.
+- **Attribution & Transparency**: As instructed in the guidelines, this track is explicitly labeled as a **synthetic voiceover**.
+
+If you wish to replace this with your own human voice recording:
+1. Record your voiceover matching the scene timings in [narration.md](file:///C:/Users/Al-Qema/ajaia-docs-submission/video/narration.md).
+2. Save your scene audio files in `video/public/` (or a single `voiceover.mp3`).
+3. Run `npm run build` to re-render.
+
+---
+
+## Directory Structure
 
 ```text
 video/
 ├── public/                 # Static assets embedded in the video
+│   ├── audio_intro.mp3     # Synthetic voiceover per scene
+│   ├── audio_main-flow.mp3
+│   ├── audio_persistence.mp3
+│   ├── audio_sharing.mp3
+│   ├── audio_import.mp3
+│   ├── audio_architecture.mp3
+│   ├── audio_tradeoffs.mp3
+│   ├── audio_ai-workflow.mp3
+│   ├── audio_self-review.mp3
+│   ├── audio_next-steps.mp3
 │   ├── screenshot_01_editor_overview.png
 │   ├── screenshot_02_rich_formatting.png
 │   ├── screenshot_03_autosave_indicator.png
@@ -23,11 +49,10 @@ video/
 │   ├── screenshot_05_shared_with_me.png
 │   ├── screenshot_06_import_modal.png
 │   ├── screenshot_07_invalid_import_error.png
-│   ├── screenshot_08_access_denied.png
-│   └── recordings/         # Raw browser recordings captured during Playwright demo
+│   └── screenshot_08_access_denied.png
 ├── src/
 │   ├── Captions.tsx        # Synchronized subtitle cue renderer with smooth fade
-│   ├── Composition.tsx     # Sequential composition series
+│   ├── Composition.tsx     # Sequential composition series with audio integration
 │   ├── Root.tsx            # Remotion root registration
 │   ├── Scene.tsx           # Individual scene layout with spring animations
 │   ├── index.ts            # Entrypoint
@@ -63,16 +88,3 @@ npm run build
 # Or directly:
 npx remotion render src/index.ts Walkthrough ../deliverables/walkthrough.mp4 --codec=h264
 ```
-
----
-
-## Adding or Swapping Voiceover Audio
-
-The video is configured with synchronous captions by default. If you wish to provide a spoken narration audio track:
-
-1. Record or generate your voiceover matching the scene timings in [narration.md](file:///C:/Users/Al-Qema/ajaia-docs-submission/video/narration.md).
-2. Save the audio file as `video/public/voiceover.mp3` or `video/public/voiceover.wav`.
-3. In `video/src/Composition.tsx`, uncomment the `<Audio src={staticFile('voiceover.mp3')} />` tag.
-4. Run `npm run build` to re-render.
-
-*Note: If synthetic text-to-speech audio is used, label it "synthetic voiceover" in presentation notes as specified in project guidelines.*

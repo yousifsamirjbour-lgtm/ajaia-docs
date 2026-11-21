@@ -4,7 +4,7 @@
 > **Deployment Live URL:** PASTE_LIVE_URL_HERE  
 > **Walkthrough Video Link:** PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE  
 > **Repository Root:** `ajaia-docs-submission/`  
-> **Primary Deliverable:** `deliverables/walkthrough.mp4` (H.264, 1920x1080 @ 30fps, 03:45 duration)  
+> **Primary Deliverable:** `deliverables/walkthrough.mp4` (H.264, 1920x1080 @ 30fps, 03:45 duration, synthetic voiceover + captions, 17.9 MB)  
 
 ---
 

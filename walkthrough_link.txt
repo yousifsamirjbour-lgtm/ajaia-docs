@@ -6,7 +6,8 @@ AJAIA DOCS - OFFICIAL PRODUCT WALKTHROUGH SCRIPT & SHOT LIST
 
 Total Duration: 03:45 (225 seconds, 6,750 frames @ 30fps)
 Resolution: 1920x1080 (16:9 Full HD)
-Video File: deliverables/walkthrough.mp4
+Video File: deliverables/walkthrough.mp4 (17.9 MB)
+Audio Track: High-clarity synthetic voiceover (edge-tts, en-US-AndrewNeural)
 Code base: React 18 + TipTap v2 + FastAPI + SQLAlchemy + SQLite (nh3 sanitization)
 
 --------------------------------------------------------------------------------
