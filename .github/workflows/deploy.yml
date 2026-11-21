@@ -1,0 +1,76 @@
+name: CI/CD Pipeline & EC2 Deployment
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Automated Tests & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Backend Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx
+
+      - name: Run Backend Tests
+        run: |
+          pytest backend/tests/test_app.py -v
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Frontend Dependencies & Build
+        working-directory: ./frontend
+        run: |
+          npm ci
+          npm run build
+
+  deploy:
+    name: Deploy to Production EC2
+    needs: test
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Execute Deployment via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+            APP_DIR="/home/ubuntu/ajaia-docs"
+            if [ ! -d "$APP_DIR" ]; then
+              echo "Cloning repository..."
+              git clone https://github.com/yousifsamirjbour-lgtm/ajaia-docs.git "$APP_DIR"
+            fi
+            cd "$APP_DIR"
+            echo "Fetching latest changes..."
+            git pull origin main
+            echo "Building and starting container..."
+            sudo docker compose -f docker-compose.prod.yml up -d --build
+            echo "Waiting for container health check..."
+            sleep 5
+            curl -f http://127.0.0.1:3000/api/health || (echo "Health check failed!" && exit 1)
+            echo "Ajaia Docs deployed successfully!"

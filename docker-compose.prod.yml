@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ajaia-docs-app
+    ports:
+      - "127.0.0.1:3000:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////app/data/ajaia_docs.db
+      - ALLOWED_ORIGINS=*
+    volumes:
+      - ajaia_prod_data:/app/data
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+volumes:
+  ajaia_prod_data:
+    name: ajaia_docs_prod_data
