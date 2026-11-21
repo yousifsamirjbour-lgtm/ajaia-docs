@@ -1,0 +1,13 @@
+Ajaia Docs - Product Specification
+
+Overview:
+Ajaia Docs provides a streamlined, AI-native writing and editing environment.
+Documents are stored as clean HTML, sanitized on ingestion, and displayed seamlessly.
+
+Key User Personas:
+- Product Engineers writing architecture briefs.
+- Technical Leads reviewing implementation specifications.
+- Autonomous Agents recording self-review traces.
+
+Notice that line breaks are preserved across paragraphs.
+Single line breaks maintain continuous thought flow.

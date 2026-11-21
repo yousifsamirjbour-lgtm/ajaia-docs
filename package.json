@@ -1,0 +1,14 @@
+{
+  "name": "ajaia-docs-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:backend": "pytest -v backend/tests/test_app.py",
+    "test:e2e": "playwright test",
+    "test:e2e:smoke": "playwright test e2e/smoke.live.spec.ts",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}

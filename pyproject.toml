@@ -1,0 +1,23 @@
+[project]
+name = "ajaia-docs"
+version = "1.0.0"
+description = "Ajaia Docs - AI-Native Full Stack Document Workspace"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.11",
+    "uvicorn>=0.34.0",
+    "sqlalchemy>=2.0.40",
+    "aiosqlite>=0.21.0",
+    "pydantic>=2.10.6",
+    "nh3>=0.2.21",
+    "python-multipart>=0.0.20",
+    "markdown>=3.7",
+    "httpx>=0.28.1",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.25.3",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["backend/tests"]
