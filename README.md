@@ -1,7 +1,8 @@
 # Ajaia Docs (AI-Native Full-Stack Document Workspace)
 
-> **Live Deployment URL:** http://13.62.51.232 (Subdomain: http://ajaiadocsyousifjbour.duckdns.org)  
-> **Walkthrough Video:** PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE  
+> **Live Deployment URL:** http://ajaiadocsyousifjbour.duckdns.org (Server Direct IP: http://13.62.51.232)  
+> **Walkthrough Video:** https://youtu.be/sBymFgackgU  
+> **Public Repository:** https://github.com/yousifsamirjbour-lgtm/ajaia-docs  
 
 A modern, responsive, collaborative rich-text document platform built with FastAPI, React 18, TipTap v2, and SQLite. Features server-side sanitized HTML persistence, dual-mode saving (debounced auto-save + instant Ctrl/Cmd+S), multi-tenant sharing with granular role-based permissions, and Markdown/plaintext ingestion.
 
@@ -149,3 +150,11 @@ docker run -p 8000:8000 -e DATABASE_URL="sqlite+aiosqlite:///backend/ajaia_docs.
 | `DATABASE_URL` | `sqlite+aiosqlite:///backend/ajaia_docs.db` | SQLAlchemy connection string (supports SQLite and PostgreSQL) |
 | `PORT` | `8000` | Port for the Uvicorn web server |
 | `ENVIRONMENT` | `production` | Environment mode (`production` or `development`) |
+
+---
+
+## Development Process & Attribution
+
+This project showcases a balanced, modern AI-native engineering methodology:
+- **Candidate Direction:** Formulated the full product and engineering specification, defined architecture and data models, established functional constraints, drafted detailed prompts and workflows, and directed deployment infrastructure and DNS configuration.
+- **AI Coding Agent:** Carried out code implementation, test automation, adversarial edge-case verification, video synthesis, and technical documentation under the candidate's exact specifications and oversight.

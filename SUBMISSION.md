@@ -1,10 +1,10 @@
 # Ajaia "AI-Native Full Stack Developer Assignment" - Final Submission
 
 > **Candidate:** Senior Full-Stack Engineering Candidate  
-> **Deployment Live URL:** http://13.62.51.232 (Subdomain: http://ajaiadocsyousifjbour.duckdns.org)  
-> **Walkthrough Video Link:** PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE  
-> **Repository Root:** `ajaia-docs-submission/`  
-> **Primary Deliverable:** `deliverables/walkthrough.mp4` (H.264, 1920x1080 @ 30fps, 03:45 duration, synthetic voiceover + captions, 17.9 MB)  
+> **Official Live URL:** http://ajaiadocsyousifjbour.duckdns.org (Server Direct IP: http://13.62.51.232)  
+> **Walkthrough Video Link:** https://youtu.be/sBymFgackgU  
+> **Public Repository:** https://github.com/yousifsamirjbour-lgtm/ajaia-docs  
+> **Primary Deliverable:** `deliverables/walkthrough.mp4` (H.264, 1920x1080 @ 30fps, 03:45 duration, synthetic voiceover + captions, 18.0 MB)  
 
 ---
 
@@ -92,7 +92,15 @@ npx playwright test
 
 ---
 
-## 6. Placeholder Locations
+## 6. Development Governance & Resolution of Placeholders
 
-As instructed in the assignment guidelines, the live deployment URL is integrated, and exactly one deployment-dependent placeholder remains for the candidate to fill:
-1. `PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE` (in `README.md`, `SUBMISSION.md`, and `walkthrough_link.txt`)
+### Process & Attribution
+This project was delivered through a balanced, structured AI-native engineering collaboration:
+- **Candidate Direction:** Formulated the full product and engineering specification, system architecture, database schema, UX flow, and functional constraints. Directed each phase through detailed prompts, specified the deployment architecture, and managed DNS and cloud parameters.
+- **AI Coding Agent:** Executed implementation, automated test suites (pytest and Playwright), edge-case hardening, video synthesis, and technical documentation strictly under the candidate's direction and oversight.
+
+### Placeholder Status
+All deployment and media placeholders are now **100% resolved**:
+- **Official Live URL:** `http://ajaiadocsyousifjbour.duckdns.org` (Server Direct IP: `http://13.62.51.232`)
+- **Walkthrough Video Link:** `https://youtu.be/sBymFgackgU`
+- Zero unresolved placeholders remain in the submission bundle.

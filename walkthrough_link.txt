@@ -1,4 +1,4 @@
-PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE
+https://youtu.be/sBymFgackgU
 
 ================================================================================
 AJAIA DOCS - OFFICIAL PRODUCT WALKTHROUGH SCRIPT & SHOT LIST
@@ -6,7 +6,8 @@ AJAIA DOCS - OFFICIAL PRODUCT WALKTHROUGH SCRIPT & SHOT LIST
 
 Total Duration: 03:45 (225 seconds, 6,750 frames @ 30fps)
 Resolution: 1920x1080 (16:9 Full HD)
-Video File: deliverables/walkthrough.mp4 (17.9 MB)
+Video File: deliverables/walkthrough.mp4 (18.0 MB)
+Online Video Link: https://youtu.be/sBymFgackgU
 Audio Track: High-clarity synthetic voiceover (edge-tts, en-US-AndrewNeural)
 Code base: React 18 + TipTap v2 + FastAPI + SQLAlchemy + SQLite (nh3 sanitization)
 

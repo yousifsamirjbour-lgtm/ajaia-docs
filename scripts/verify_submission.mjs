@@ -19,7 +19,8 @@ const FORBIDDEN_PLACEHOLDER_PATTERNS = [
   /FIXME/i,
   /<INSERT/i,
   /REPLACE_ME/i,
-  /TBD/i
+  /TBD/i,
+  /PASTE_/i
 ]
 
 let totalErrors = 0

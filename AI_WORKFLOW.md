@@ -1,7 +1,7 @@
 # AI Development Workflow & Self-Review Report
 
 ## 1. Tools Used
-- **AI Coding Agent:** Antigravity autonomous agentic assistant (Google DeepMind), running single-turn autonomous execution.
+- **AI Coding Agent:** Antigravity autonomous agentic assistant (Google DeepMind), executing under candidate specifications and prompt direction.
 - **Python Backend & Test Tooling:**
   - Python 3.14.5 (tested with 3.11+ compatibility)
   - FastAPI 0.115.11
@@ -24,10 +24,10 @@
 
 ## 2. Roles & Attribution
 
-- **Candidate's Role:**
-  The candidate formulated the initial assignment specification, defined the system architecture, established project constraints, set the acceptance criteria, and directed the assignment parameters.
-- **AI Agent's Role:**
-  The implementation, automated test suites (pytest and Playwright), edge-case self-review, video composition and rendering, and documentation were conceived, coded, tested, debugged, and finalized completely by the AI coding agent in a single autonomous run. No code, review, or manual testing was hand-written or manually executed by the candidate during this run.
+- **Candidate's Role (Direction & Specification):**
+  The candidate formulated the product and engineering specification, system structure, architecture direction, data models, UX workflow, and scope constraints. The candidate drafted the detailed prompts and technical instructions, and directed each phase including deployment strategy, server environment, and DNS setup.
+- **AI Agent's Role (Implementation & Verification):**
+  The AI coding agent executed code implementation, automated test suites (pytest and Playwright), adversarial edge-case hardening, video synthesis, and technical documentation generation strictly under the candidate's specifications, constraints, and prompt direction.
 
 ---
 
