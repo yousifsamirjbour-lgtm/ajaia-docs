@@ -61,8 +61,8 @@ SCENES = [
     {
         "id": "next-steps",
         "duration_sec": 20.0,
-        "text": "The project is packaged for production with Docker, health checks, and single-origin serving. In 2 to 4 more hours, production JWT authentication and Yjs WebSocket CRDTs would be added. Thank you for reviewing Ajaia Docs. All source, tests, and documentation are ready for evaluation.",
-        "rate": "+5%"
+        "text": "Ajaia Docs is live in production on AWS, automated with Terraform and GitHub Actions CI/CD. Nginx reverse proxies traffic for our subdomain and live IP within AWS Free Tier. Priorities ahead include JWT authentication and Yjs real-time cursors. Thank you; all deliverables are ready.",
+        "rate": "+12%"
     }
 ]
 

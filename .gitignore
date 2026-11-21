@@ -20,3 +20,5 @@ video/public/recordings/
 *.env
 *.pem
 *.key
+*.mp4
+*.webm

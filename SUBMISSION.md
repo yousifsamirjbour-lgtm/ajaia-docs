@@ -1,7 +1,7 @@
 # Ajaia "AI-Native Full Stack Developer Assignment" - Final Submission
 
 > **Candidate:** Senior Full-Stack Engineering Candidate  
-> **Deployment Live URL:** PASTE_LIVE_URL_HERE  
+> **Deployment Live URL:** http://13.62.51.232 (Subdomain: http://ajaiadocsyousifjbour.duckdns.org)  
 > **Walkthrough Video Link:** PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE  
 > **Repository Root:** `ajaia-docs-submission/`  
 > **Primary Deliverable:** `deliverables/walkthrough.mp4` (H.264, 1920x1080 @ 30fps, 03:45 duration, synthetic voiceover + captions, 17.9 MB)  
@@ -94,6 +94,5 @@ npx playwright test
 
 ## 6. Placeholder Locations
 
-As instructed in the assignment guidelines, exactly two deployment-dependent placeholders remain to be filled upon final deployment:
-1. `PASTE_LIVE_URL_HERE` (in `README.md` and `SUBMISSION.md`)
-2. `PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE` (in `README.md`, `SUBMISSION.md`, and `walkthrough_link.txt`)
+As instructed in the assignment guidelines, the live deployment URL is integrated, and exactly one deployment-dependent placeholder remains for the candidate to fill:
+1. `PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE` (in `README.md`, `SUBMISSION.md`, and `walkthrough_link.txt`)

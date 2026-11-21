@@ -210,22 +210,22 @@ export const SCENES: SceneConfig[] = [
   },
   {
     id: 'next-steps',
-    title: 'Production Readiness & Future Roadmap',
-    category: 'Next Steps (2-4 Hours)',
+    title: 'Live Production Deployment & Roadmap',
+    category: 'Production Status & Roadmap',
     durationInFrames: 600, // 20s
     bgGradient: 'linear-gradient(135deg, #0f172a 0%, #0f766e 100%)',
-    caption: 'The application is completely deployment-ready via Docker. With 2 to 4 additional hours, several high-impact enhancements could be added.',
-    badge: 'Roadmap & Production Next Steps',
+    caption: 'The application is deployed and live on AWS with Docker, Nginx, Terraform, and GitHub Actions CI/CD. Future roadmap enhancements are queued as next steps.',
+    badge: 'Live in Production • AWS Free Tier',
     bulletPoints: [
-      'Production Auth: Replace header-based mock with JWT Bearer auth or OAuth2 (Google/GitHub)',
-      'Real-Time Collaboration: Integrate Yjs CRDTs over WebSockets for live multi-cursor editing',
-      'Version History: Document revision snapshots with point-in-time rollback',
-      'Cloud Storage: Move media and large document attachments to S3 or Cloudflare R2'
+      'Live Production URL: Deployed on AWS EC2 (eu-north-1) with Nginx reverse proxy and Docker',
+      'Automated CI/CD & Terraform: GitHub Actions pipeline automatically tests and deploys on push to main',
+      'Domain & Subdomain: Configured for ajaiadocsyousifjbour.duckdns.org and live public IP',
+      'Future Roadmap (2-4h): Production OAuth2/JWT auth, Yjs WebSocket CRDTs, and revision history snapshots'
     ],
     subtitles: [
-      { startFrame: 0, endFrame: 200, text: 'The project is packaged for production with Docker, health checks, and single-origin serving.' },
-      { startFrame: 200, endFrame: 400, text: 'In 2 to 4 more hours, production JWT authentication and Yjs WebSocket CRDTs would be added.' },
-      { startFrame: 400, endFrame: 600, text: 'Thank you for reviewing Ajaia Docs. All source, tests, and documentation are ready for evaluation.' }
+      { startFrame: 0, endFrame: 200, text: 'Ajaia Docs is live in production on AWS EC2, automated with Terraform and GitHub Actions CI/CD.' },
+      { startFrame: 200, endFrame: 400, text: 'Nginx reverse proxies traffic for ajaiadocsyousifjbour and public IP, maintaining zero-cost Free Tier compliance.' },
+      { startFrame: 400, endFrame: 600, text: 'Future roadmap items include JWT auth and real-time collaborative cursors. Thank you for your evaluation.' }
     ]
   }
 ];

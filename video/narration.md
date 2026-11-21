@@ -54,5 +54,5 @@
 
 ---
 
-### Scene 10: Production Readiness & Next Steps (3:25 - 3:45 / Frames 6150 - 6750)
-> "Ajaia Docs is fully deployment-ready with Docker and verified health checks. Given two to four additional hours, the immediate priorities would be implementing production OAuth2 or JWT authentication, integrating Yjs WebSocket CRDTs for real-time collaborative cursors, and adding document revision history. Thank you for your time; all source code, tests, and documentation are available for your evaluation."
+### Scene 10: Live Production Deployment & Roadmap (3:25 - 3:45 / Frames 6150 - 6750)
+> "Ajaia Docs is live in production on AWS, automated with Terraform and GitHub Actions CI/CD. Nginx reverse proxies traffic for our subdomain and live IP within AWS Free Tier. Priorities ahead include JWT authentication and Yjs real-time cursors. Thank you; all deliverables are ready."

@@ -165,18 +165,18 @@ instead of 422, plaintext line breaks were standardized, and title lengths were
 bounded at 200 characters. Each fix was committed separately with regression tests."
 
 --------------------------------------------------------------------------------
-SCENE 10: PRODUCTION READINESS & FUTURE ROADMAP (03:25 - 03:45 | 600 frames)
+SCENE 10: LIVE PRODUCTION DEPLOYMENT & ROADMAP (03:25 - 03:45 | 600 frames)
 --------------------------------------------------------------------------------
 Visual:
-- Closing slide with Next Steps (2-4 hours):
-  * Production JWT Bearer / OAuth2 authentication
-  * Live multi-cursor real-time editing via Yjs WebSockets
-  * Document revision history snapshots and rollback
-  * S3/R2 cloud storage for large media attachments
-- Project repository link and contact details.
+- Live production deployment summary & roadmap:
+  * Live production host on AWS EC2 (eu-north-1) via Docker & Nginx reverse proxy
+  * Automated CI/CD pipeline via GitHub Actions and Terraform infrastructure config
+  * Subdomain routing for ajaiadocsyousifjbour.duckdns.org and live IP fallback
+  * Future roadmap priorities: JWT authentication, Yjs WebSockets, revision history
+- Public repository: https://github.com/yousifsamirjbour-lgtm/ajaia-docs
 
 Presenter Narration:
-"The platform is fully deployment-ready. Given two to four additional hours, we
-would integrate production OAuth2 authentication, live multi-cursor collaboration
-using Yjs over WebSockets, and revision history. Thank you for evaluating Ajaia
-Docs; all source code, tests, and documentation are ready for your review."
+"Ajaia Docs is live in production on AWS, automated with Terraform and GitHub
+Actions CI/CD. Nginx reverse proxies traffic for our subdomain and live IP within
+AWS Free Tier. Priorities ahead include JWT authentication and Yjs real-time
+cursors. Thank you; all deliverables are ready."

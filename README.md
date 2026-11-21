@@ -1,6 +1,6 @@
 # Ajaia Docs (AI-Native Full-Stack Document Workspace)
 
-> **Live Deployment URL:** PASTE_LIVE_URL_HERE  
+> **Live Deployment URL:** http://13.62.51.232 (Subdomain: http://ajaiadocsyousifjbour.duckdns.org)  
 > **Walkthrough Video:** PASTE_LOOM_OR_YOUTUBE_UNLISTED_LINK_HERE  
 
 A modern, responsive, collaborative rich-text document platform built with FastAPI, React 18, TipTap v2, and SQLite. Features server-side sanitized HTML persistence, dual-mode saving (debounced auto-save + instant Ctrl/Cmd+S), multi-tenant sharing with granular role-based permissions, and Markdown/plaintext ingestion.
